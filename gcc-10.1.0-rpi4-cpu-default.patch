@@ -1,0 +1,18 @@
+Origin:                  https://intestinate.com/pilfs
+
+--- gcc-10.1.0.orig/gcc/config.gcc	2020-07-15 22:51:55.794365183 -0400
++++ gcc-10.1.0/gcc/config.gcc	2020-07-15 23:00:21.051456291 -0400
+@@ -1279,6 +1279,13 @@
+ 	    tmake_file="$tmake_file arm/t-linux-androideabi"
+ 	    ;;
+ 	esac
++	case ${target} in
++	arm*-*-*eabihf)
++	    with_cpu=${with_cpu:-cortex-a72}
++	    with_fpu=${with_fpu:-neon-fp-armv8}
++	    with_float=${with_float:-hard}
++	    ;;
++	esac
+ 	# The EABI requires the use of __cxa_atexit.
+ 	default_use_cxa_atexit=yes
+ 	with_tls=${with_tls:-gnu}

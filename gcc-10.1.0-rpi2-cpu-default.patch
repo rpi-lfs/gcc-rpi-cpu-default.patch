@@ -1,8 +1,8 @@
 Origin:                  https://intestinate.com/pilfs
 
---- gcc-9.1.0.orig/gcc/config.gcc	2019-07-15 22:51:55.794365183 -0400
-+++ gcc-9.1.0/gcc/config.gcc	2019-07-15 22:58:21.654495465 -0400
-@@ -1189,6 +1189,13 @@
+--- gcc-10.1.0.orig/gcc/config.gcc	2020-07-15 22:51:55.794365183 -0400
++++ gcc-10.1.0/gcc/config.gcc	2020-07-15 22:58:21.654495465 -0400
+@@ -1279,6 +1279,13 @@
  	    tmake_file="$tmake_file arm/t-linux-androideabi"
  	    ;;
  	esac
